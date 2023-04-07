@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    background: color #666;;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+
+  h1,
+  h2,
+  h3 {
+    margin: 0;
+    text-align: center;
+  }
+
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  section {
+    display: none;
+  }
+
+  section.active {
+    display: block;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  figure {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  figcaption {
+    font-style: italic;
+    font-size: 0.8em;
+  }
+  

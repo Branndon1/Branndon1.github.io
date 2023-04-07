@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<style> 
+			body {
+		font-size: 16px;
+		background-color: #eeeeee;
+		color: #680000;
+	}
+	
+	/*styling for the page title*/
+	h1 {
+		font-style: italic;
+		font-size: 28px;
+		text-align: center;
+		background-color: #996600;
+		color: #f8f8f8;
+	}
+	
+	/*styling for the overall table*/
+	table {
+		background-color: #F8F8F8;
+		border: solid 2px #787878;
+	}
+	
+	/*styling for the title of the table*/
+	th {
+		font-weight: bold;
+		text-align: left;
+	}
+	
+	/*styling for the coffee types*/
+	.label {
+		font-weight: bold;
+	}
+	
+	/*styling for the tables*/
+	.altrow {
+		background-color: #E0E0E0;
+	}
+	
+	/*styling for the Google Map link*/
+	#locationlink {
+		color: #380000;
+		font-style:italic;
+	}
+	 
+	
+	/*styling for the bottom copyright information*/
+	footer {
+		font-style: italic;
+		font-size: 12px;
+		text-align: center;
+	}
+	 /* input element*/
+	 input[type = 'text']
+	 { 
+		background-color: lightcoral;
+		color: white;
+		font-size: 20px;
+	 }
+	   input[type = submit]
+	   { 
+		background-color: darkorange;
+		color: yellow
+	   }
+	
+			</style>
+			
+		<title>Java Jam Coffee House</title>
+		<meta name="description" content="3135 Activity">
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="Activity3.css">
+	</head>
+
+	<body>
+		
+		<header>
+			<h1>JavaJam Coffee House - Brandon Jones itis 3135</h1>
+		</header>
+		
+		<main>
+
+			<p>We are a gourmet coffee shop that serves snacks, coffee, tea, and soft drinks. Visit us to check out our:</p>
+			<ul>
+				<li>Specialty Coffee and Tea</li>
+				<li>Bagls, Muffins, and Organic Snacks</li>
+				<li>Music and Poetry Readings</li>
+				<li>Open Mic Night</li>
+			</ul>
+
+
+			<h2>Menu</h2>
+
+			<table>
+				<tr>
+					<th colspan="2">Coffee Selections</th>
+				</tr>
+				<tr class="altrow">
+					<td class="label">
+						Just Java
+					</td>
+					<td>
+						Regular house blend, decaffeinated coffee, or flavor of the day.<br>
+						Endless Cup $2.00
+					</td>
+				</tr>
+				<tr>
+					<td class="label">
+						Cafe au Lait
+					</td>
+					<td>
+						House blended coffee infused into a smooth, steamed milk.<br>
+						Small $2.00, Medium $4.00, Large $6.00
+					</td>
+				</tr>
+				<tr class="altrow">
+					<td class="label">
+						Iced Cappuccino
+					</td>
+					<td>
+						Sweetened espresso blended with icy-cold mil and served in a chilled glass. $4.75
+					</td>
+				</tr>
+			</table>
+
+
+			<form action="#">
+				<label for= userName >Name</label> <br>
+				<input type= text id="text" required placeholder = "Name"/>
+				<br><br>
+				<label for="newsletter">Enter name to receive Newsletters or coupons</label>
+			<br>
+			<br>
+			<select id="newsletter">
+			<option value = Select selected>--Select Newsletter or coupon--</option>
+			<option value="weekly Newsletter">weekly Newsletters</option>
+			
+			<option value="one coupon">one coupon</option>
+			</select>
+			<br> 
+			<br>
+            <input type = checkbox id= check/> Agree to receive weekly newsletter 
+			<br>
+			<br>
+            <input type="submit">
+            </form>
+
+
+
+
+
+			<h2>Music</h2>
+
+			<p>Local musicians play every Friday and Saturday nights. Sunday night is open mic night.</p>
+
+			<h2>Location</h2>
+			<p>JavaJam is located at<br>
+			8544 University City Blvd<br>
+			Charlotte, NC 28213.<br>
+			See <a id="locationlink" href="https://maps.google.com/">Google Maps</a> for directions.</p>
+
+		</main>
+
+		<footer>
+			<p>Copyright © JavaJam Coffee House<br>
+			manager@javajam.com</p>
+			<a href="https://validator.w3.org/check?uri=referer">Validate HTML</a> 
+			<a href="https://jigsaw.w3.org/css-validator/check/referer">Validate CSS</a>
+		</footer>
+
+	</body>
+</html>

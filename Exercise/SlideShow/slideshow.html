@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Slideshow Example</title>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  
+  <style>
+#slideshow {
+ position: relative;
+width: 600px; 
+height: 300px; 
+margin: 0 auto; 
+}
+#slideshow img {
+position: absolute;
+top: 0;
+left: 0;
+width: 600px; 
+height: 300px; 
+opacity: 0;
+transition: opacity 1s ease-in-out;
+}
+#slideshow img.active {
+opacity: 1;
+}
+#gallery {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+margin-top: 20px;
+}
+#gallery img {
+width: 100px;
+height: 75px;
+margin: 5px;
+cursor: pointer;
+}
+#gallery img.active {
+border: 3px solid red;
+}
+body {
+    background-color:black;
+  }
+  h1, h2, .tagline {
+  color: white;
+}
+
+</style>
+
+</head>
+<body></body>
+<header>
+    <h1>ITIS 3135 - Brandon Jones</h1>
+  </header>
+
+  <main>
+        <h2>SlideShow</h2>
+        <p class="tagline">A slideshow of images of scenery I picked.</p>
+
+  
+  <div id="slideshow">
+    <img src="image1.jpg" alt="Image 1" />
+    <img src="image2.jpg" alt="Image 2" />
+    <img src="image3.jpg" alt="Image 3" />
+    <img src="image4.jpg" alt="Image 4" />
+    <img src="image5.jpg" alt="Image 5" />
+    <img src="image6.jpg" alt="Image 6" />
+  </div>
+
+  <div id="gallery">
+    <img src="image1.jpg" alt="Image 1" class="active" />
+    <img src="image2.jpg" alt="Image 2" />
+    <img src="image3.jpg" alt="Image 3" />
+    <img src="image4.jpg" alt="Image 4" />
+    <img src="image5.jpg" alt="Image 5" />
+    <img src="image6.jpg" alt="Image 6" />
+  </div>
+
+  <script>
+   $(document).ready(function() {
+  $('#slideshow img:first').addClass('active');
+  var interval = setInterval(function() {
+    var active = $('#slideshow img.active');
+    var next = (active.next().length > 0) ? active.next() : $('#slideshow img:first');
+    active.removeClass('active');
+    next.addClass('active'); }, 5000); 
+  $('#gallery img').click(function() {
+    $('#gallery img').removeClass('active');
+    $(this).addClass('active');
+    var index = $(this).index();
+    $('#slideshow img').removeClass('active');
+    $('#slideshow img:eq(' + index + ')').addClass('active');
+    clearInterval(interval);
+ });
+});
+</script>
+
+</body>
+
+</html>
+
